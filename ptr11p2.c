@@ -4,11 +4,11 @@
  * arguments a pointer to a struct entry (the listHead) and another pointer
  * to a struct entry after which the new entry is to be placed.
  *
- */
+*/
 
 /* includes */
 
-
+#include <stdio.h>
 
 
 
@@ -19,12 +19,16 @@
 
 /* structs */
 
-
+struct entry{
+    char data[70];
+    struct entry *next;
+};
 
 
 /* function declarations */
 
-
+int insertEntry(struct entry *listHead, struct entry *listPosition,
+        struct entry *newEntry);
 
 
 
@@ -44,3 +48,18 @@ int main(int argc, char *argv[]){
 
 
 /* funtion definitions */
+
+int insertEntry(struct entry *listHead, struct entry *listPosition,
+        struct entry *newEntry){
+
+
+
+
+    return(0);
+}
+
+
+
+
+
+
