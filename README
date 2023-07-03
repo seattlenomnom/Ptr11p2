@@ -1,0 +1,8 @@
+/* README for ptr11p2
+*
+*  Ptr11p2 shows the develpment, and use of insertEntry(). This function
+*  inserts a node into a singly linked list, after the given node.
+*
+*  Function: insertEntry(struct entry *listHead, struct entry *position).
+*
+*/
