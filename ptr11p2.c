@@ -18,7 +18,6 @@
 #include <stdio.h>
 
 
-
 /* defines */
 
 
@@ -27,21 +26,60 @@
 /* structs */
 
 struct entry{
-    char data[70];
+    int value;
     struct entry *next;
 };
 
 
 /* function declarations */
 
-int insertEntry(struct entry *listHead, struct entry *listPosition,
-        struct entry *newEntry);
-
+void insertEntry(struct entry *p2New, struct entry *p2Exist);
 
 
 /* main */
 
 int main(int argc, char *argv[]){
+
+    /* declare entryies */
+
+
+
+
+
+    /* define entries */
+
+
+
+
+
+    /* create linked list */
+
+
+
+
+
+
+    /* print out original list */
+
+
+
+
+
+
+
+    /* insert new node */
+
+
+
+
+
+
+
+
+
+
+
+    /* print new linked list */
 
 
 
@@ -56,17 +94,33 @@ int main(int argc, char *argv[]){
 
 /* funtion definitions */
 
-int insertEntry(struct entry *listHead, struct entry *listPosition,
-        struct entry *newEntry){
+
+void insertEntry(struct entry *p2New, struct entry *p2Exist){
 
 
 
 
-    return(0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-
-
-
 
 
 
