@@ -40,7 +40,10 @@ void insertEntry(struct entry *p2New, struct entry *p2Exist);
 
 int main(int argc, char *argv[]){
 
-    /* declare entryies */
+    /* declare entries */
+
+    struct entry n1, n2, n3, n4, nNew, *p2Entry;
+    struct entry *p2New, *p2Exist;
 
 
 
@@ -48,11 +51,24 @@ int main(int argc, char *argv[]){
 
     /* define entries */
 
+    n1.value = 100;
+    n2.value = 200;
+    n3.value = 300;
+    n4.value = 400;
+    nNew.value = 500;
+
+
 
 
 
 
     /* create linked list */
+
+    n1.next = &n2;
+    n2.next = &n3;
+    n3.next = &n4;
+    n4.next = (struct entry *) 0;
+    nNew.next = (struct entry *) 0;
 
 
 
@@ -61,6 +77,12 @@ int main(int argc, char *argv[]){
 
     /* print out original list */
 
+    p2Entry = &n1;
+    while(p2Entry != (struct entry *) 0) {
+        printf("%i  ", p2Entry->value);
+        p2Entry = p2Entry->next;
+    }
+    printf("\n");
 
 
 
@@ -69,7 +91,9 @@ int main(int argc, char *argv[]){
 
     /* insert new node */
 
-
+    p2New = &nNew;
+    p2Exist = &n4;                  /* insert after entry 2 */
+    insertEntry(p2New, p2Exist);
 
 
 
@@ -80,6 +104,15 @@ int main(int argc, char *argv[]){
 
 
     /* print new linked list */
+
+
+    p2Entry = &n1;
+    while(p2Entry != (struct entry *) 0) {
+        printf("%i  ", p2Entry->value);
+        p2Entry = p2Entry->next;
+    }
+    printf("\n");
+
 
 
 
@@ -97,27 +130,8 @@ int main(int argc, char *argv[]){
 
 void insertEntry(struct entry *p2New, struct entry *p2Exist){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    p2New->next = p2Exist->next;
+    p2Exist->next = p2New;
 
 
 }
